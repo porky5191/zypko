@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_payment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/transparent"
+        app:title="Payment Options"
+        app:titleTextColor="@color/colorBlue_tez" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_payment">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_online_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_payment_online_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/card"
+                    android:drawablePadding="10dp"
+                    android:text="Online payment"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/payment_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    app:bsb_auto_adjust_section_mark="true"
+                    app:bsb_bubble_color="@color/colorBlue_tez_light"
+                    app:bsb_bubble_text_color="@color/colorWhite"
+                    app:bsb_max="100"
+                    app:bsb_min="20"
+                    app:bsb_progress="100"
+                    app:bsb_second_track_color="@color/colorBlue_tez_extra_dark"
+
+                    app:bsb_section_count="8"
+                    app:bsb_section_text_position="below_section_mark"
+                    app:bsb_seek_by_section="true"
+                    app:bsb_show_progress_in_float="false"
+                    app:bsb_show_section_mark="true"
+
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_touch_to_seek="true"
+                    app:bsb_track_color="@color/colorBlue_tez" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/ic_announcement_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/partial_payment"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/color_sub_text_color"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout_COD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout_online_payment"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50sp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_payment_COD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/cod"
+                    android:drawablePadding="10dp"
+                    android:text="Cash On Delivery"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="34dp"
+                    android:text="@string/cod_availability"
+                    android:textColor="@color/color_sub_text_color"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout_COD"
+                android:layout_marginBottom="60dp"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Amount"
+                            android:textColor="@color/color_text_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:animateLayoutChanges="true"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:text="@string/rupee"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_payment_total_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="300"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_payable_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:animateLayoutChanges="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Payable amount ( "
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_payment_percent_paid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="% )"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:animateLayoutChanges="true"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:text="@string/rupee"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_payment_payable_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="150"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_rest_payable_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:text="Rest payable amount when delivered"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/color_text_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:animateLayoutChanges="true"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:text="@string/rupee"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_payment_rest_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:text="150"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/Linear_layout_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_announcement_black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/order_before_1_hour"
+                            android:textColor="@color/color_google_dark_red"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btn_payment_proceed_to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="1dp"
+        android:background="@color/colorBlue_tez_dark"
+        android:text="PROCEED TO PAY"
+        android:textColor="@color/colorWhite" />
+
+    <ProgressBar
+        android:id="@+id/payment_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorBlue_tez_extra_dark"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

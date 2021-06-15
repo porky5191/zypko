@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#346afd</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowActivityTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Food_name_textview" >
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorTextview_of_food</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="Dialog.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:padding">0dp</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorBlue_tez</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorBlue_tez</item>
+    </style>
+
+
+    /// style for label
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <!-- <item name="android:textColorHint">@color/color_text_color</item>
+        <item name="android:textSize">20sp</item> -->
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/color_sub_text_color</item>
+        <item name="colorControlNormal">@color/color_light_red</item>
+        <item name="colorControlActivated">@color/colorBlue_tez</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/nested_recycler_view_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /> -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <io.supercharge.shimmerlayout.ShimmerLayout
+                    android:id="@+id/shimmer_layout_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:shimmer_angle="20"
+                    app:shimmer_animation_duration="900"
+                    app:shimmer_color="@color/place_holder_transparent"
+                    app:shimmer_gradient_center_color_width=".5"
+                    app:shimmer_mask_width=".3">
+
+                    <include layout="@layout/shimmeer_layout_for_cart" />
+
+                </io.supercharge.shimmerlayout.ShimmerLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/Linear_layout_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/imageView_cart_hotel_photo"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:adjustViewBounds="true"
+                            android:padding="5dp"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:id="@+id/textView_cart_hotel_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/colorFloating_text_color"
+                                android:textSize="20sp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/textView_cart_hotel_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text=""
+                                android:textColor="@color/color_sub_text_color"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line_separator_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/color_of_separator" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_for_selected_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_view_1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_view_1"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:padding="5dp"
+                                android:text="Subtotal"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="20sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight=".5"
+                                android:gravity="right"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rupee"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="20sp" />
+
+                                <TextView
+                                    android:id="@+id/textView_cart_subtotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="300.00"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="20sp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:padding="5dp"
+                                android:text="Delivery Charge"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight=".5"
+                                android:gravity="right"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rupee"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/textView_cart_delivery_charge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="0.00"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:padding="5dp"
+                                android:text="Packaging charge"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight=".5"
+                                android:gravity="right"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rupee"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/textView_cart_packaging_charge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="0.00"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:padding="5dp"
+                                android:text="Food taxes (10%)"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight=".5"
+                                android:gravity="right"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rupee"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/textView_cart_food_taxes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="0.00"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <CheckBox
+                                android:id="@+id/check_box_cart_water_bottle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:buttonTint="@color/colorBlue_tez"
+                                android:checked="false"
+                                android:text="1L Water Bottle (15 Rs)"
+                                android:textSize="14sp"
+
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight=".5"
+                                android:gravity="right"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rupee"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/textView_cart_water_bottle_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="15.00"
+                                    android:textColor="@color/color_text_color"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/line_separator_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/color_of_separator" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:padding="10dp"
+                                android:text="To Pay"
+                                android:textColor="@color/colorFloating_text_color"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight=".5"
+                                android:gravity="right"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/rupee"
+                                    android:textColor="@color/colorFloating_text_color"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView_cart_total_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="300.00"
+                                    android:textColor="@color/colorFloating_text_color"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_view_2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="100dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_announcement_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/free_delivery_text"
+                        android:textColor="@color/colorBlue_tez_dark"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="1dp"
+        android:background="@color/colorBlue_tez"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight=".7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rupee"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView_cart_total_food_price_to_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="120"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:foreground="?android:attr/selectableItemBackground">
+
+
+            <TextView
+                android:id="@+id/text_view_proceed_to_pay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:drawableRight="@drawable/ic_account_balance_wallet_white"
+                android:gravity="right"
+                android:padding="5dp"
+                android:text="Proceed to checkout"
+                android:textColor="@color/colorWhite"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

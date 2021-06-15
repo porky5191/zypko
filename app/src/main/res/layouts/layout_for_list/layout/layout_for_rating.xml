@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_delivery_boy_rating"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:title="Rate your Delivery Boy"
+        app:titleTextColor="@color/colorBlue_tez"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar_delivery_boy_rating"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name_delivery_boy_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:text="Dipankar Rabha"
+            android:textColor="@color/color_text_color"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_phone_no_delivery_boy_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="8486749811"
+            android:textColor="@color/color_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rating_text_delivery_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_sub_text_color"/>
+
+        <RatingBar
+            android:id="@+id/rating_delivery_boy_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:rating="3"
+            android:numStars="5"
+            android:scaleX="0.7"
+            android:scaleY="0.7" />
+
+        <EditText
+            android:id="@+id/et_comment_delivery_boy_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            app:backgroundTint="@color/colorBlue_tez"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:hint="Comment"
+            android:maxLines="2"
+            android:padding="15dp"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_submit_delivery_boy_rating"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_rating"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="SUBMIT"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView_delivery_boy_rating"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_below="@id/tool_bar_delivery_boy_rating"/>
+
+
+
+</RelativeLayout>

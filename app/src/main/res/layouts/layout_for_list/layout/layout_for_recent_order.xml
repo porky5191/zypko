@@ -1,0 +1,367 @@
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID#"
+                android:textColor="@color/color_text_color"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/tv_recent_order_table_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3322145676"
+                android:textColor="@color/color_text_color"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recent_order_user_account_hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel Dynesti"
+                android:textColor="@color/color_text_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+            <TextView
+                android:id="@+id/tv_recent_order_user_account_hotel_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gandhi Basti, Saraniya Hills"
+                android:textColor="@color/color_text_color"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="At "
+                android:textColor="@color/color_text_color"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_recent_order_user_account_station_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="Paltan Bazar Station"
+                android:textColor="@color/color_text_color"
+                android:textSize="15sp" />
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+
+                <TextView
+                    android:id="@+id/tv_recent_order_user_account_total_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" items"
+                    android:textColor="@color/color_text_color"
+                    android:paddingRight="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_of_separator"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rupee"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:textStyle="bold"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_recent_order_user_account_paid_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="120"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_color"
+                    android:paddingRight="10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="["
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_recent_order_user_account_pay_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid via "
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_recent_order_user_account_paid_via_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cash"
+                    android:textColor="@color/color_text_color"
+                    android:paddingRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="]"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_partial_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_recent_order_layout_paid_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid amount "
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_color"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount left to pay"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_text_color"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_paid_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/color_text_color"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_recent_order_paid_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_text_color"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/color_text_color"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_recent_order_amount_left_to_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/color_text_color"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_recent_order_track_your_order"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="TRACK YOUR ORDER"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue_tez_dark"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            />
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

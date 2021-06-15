@@ -1,0 +1,100 @@
+{
+  "project_info": {
+    "project_number": "417521759540",
+    "firebase_url": "https://mridulapp-33953.firebaseio.com",
+    "project_id": "mridulapp-33953",
+    "storage_bucket": "mridulapp-33953.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417521759540:android:a31c5abd1d9aad6c",
+        "android_client_info": {
+          "package_name": "com.example.mridul.mridulapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417521759540-n1i1mv17mpd8pj0q8gs300qu86rp3jtt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mridul.mridulapp",
+            "certificate_hash": "5cef9ae523c37f401cf9120527057c8eb19f5aa6"
+          }
+        },
+        {
+          "client_id": "417521759540-bkeq8qp3q0s5c34apbmju5mgl8cnq82h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwnCHTUIHxM9Yl7frO6N05eZKTw_jjNO4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417521759540-bkeq8qp3q0s5c34apbmju5mgl8cnq82h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-5087566694184842~7657175194"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417521759540:android:66fb5fcd85a9a0b0",
+        "android_client_info": {
+          "package_name": "com.zypko.zypko4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417521759540-9cdhrcfm26vdsplqpa2k5rn9ghqdule9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zypko.zypko4",
+            "certificate_hash": "5cef9ae523c37f401cf9120527057c8eb19f5aa6"
+          }
+        },
+        {
+          "client_id": "417521759540-bkeq8qp3q0s5c34apbmju5mgl8cnq82h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwnCHTUIHxM9Yl7frO6N05eZKTw_jjNO4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417521759540-bkeq8qp3q0s5c34apbmju5mgl8cnq82h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

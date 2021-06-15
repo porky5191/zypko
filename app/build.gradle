@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zypko.zypko4"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 7
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res',
+                            'src/main/res/layouts',
+                            'src/main/res/layouts/activity',
+                            'src/main/res/layouts/layout_for_list',
+                            'src/main/res/layouts/fragment',
+                            'src/main/res/layouts/layout_for_nested_recycler_view',
+                            'src/main/res/layouts/dialog_box',
+                            'src/main/res/layouts/animation_layout'
+
+
+                    ]
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:animated-vector-drawable:28.0.0'
+    implementation 'com.android.support:exifinterface:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    // volley
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation "com.android.support:support-core-utils:28.0.0"
+    implementation 'com.github.dimorinny:floating-text-button:0.0.4'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+
+
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // for QR code
+    implementation 'com.google.zxing:core:3.2.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+
+    // seek bar
+    implementation 'com.xw.repo:bubbleseekbar:3.5-lite'
+
+    // shimmer layout ( loading layout )
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+    // floating search bar
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+
+    //Paytm Gateway
+    implementation 'com.paytm:pgplussdk:1.3.3'
+
+    //OTP
+    implementation ('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+
+    //lottie animation
+    implementation 'com.airbnb.android:lottie:2.0.0'
+
+    // View Flipper Animation
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+
+}
+apply plugin: 'com.google.gms.google-services'

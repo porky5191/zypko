@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_food_tracking"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:titleTextColor="@color/colorBlue_tez" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefreshLayout_tracking_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_food_tracking">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order ID# "
+                            android:textColor="@color/color_text_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_order_table_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="87765512"
+                            android:textColor="@color/color_text_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estimated Time : "
+                            android:textColor="@color/color_text_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="1 Hour"
+                            android:textColor="@color/color_text_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout1"
+                    android:layout_margin="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/order_accepted" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight=".9"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order Accepted"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your order has been accepted"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageview_order_accepted"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            android:src="@drawable/ic_check_green"
+                            android:visibility="gone" />
+
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottie_animation_tracking_order_accepted"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_fileName="loading_tracking.json"/>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardview1"
+                    android:layout_margin="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:weightSum="1"
+                        android:animateLayoutChanges="true">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/cooking" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight=".9"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cooking"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="We are preparing your Order"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageview_cocking"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            android:src="@drawable/ic_check_green"
+                            android:visibility="gone" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottie_animation_tracking_order_cocked"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_fileName="loading_tracking.json"/>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardview2"
+                    android:layout_margin="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/packaging" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight=".9"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Packaging"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your order is under packaging"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageview_packing"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            android:src="@drawable/ic_check_green"
+                            android:visibility="gone" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottie_animation_tracking_packing"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_fileName="loading_tracking.json"/>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardview3"
+                    android:layout_margin="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/picked_up" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight=".9"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Picked Up"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your order has been picked up"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageview_picked_up"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            android:src="@drawable/ic_check_green"
+                            android:visibility="gone" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottie_animation_tracking_order_picked_up"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_fileName="loading_tracking.json"/>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardview4"
+                    android:layout_margin="7dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/delivered" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight=".9"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Delivered"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your order is successfully delivered"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageview_delivered"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            android:src="@drawable/ic_check_green"
+                            android:visibility="gone" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/lottie_animation_tracking_delivered"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".1"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_fileName="loading_tracking.json"/>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardview5"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_announcement_black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/text_above_qr_code"
+                        android:textSize="17sp" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/qr_card_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp">
+
+                    <ImageView
+                        android:id="@+id/image_view_user_qr_code"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/qr" />
+
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBlue_tez">
+
+        <TextView
+            android:id="@+id/textview_call_delivery_boy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Call Delivery Boy"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_animation_duration="1300"
+        android:id="@+id/shimmer_layout_hotel_details"
+        app:shimmer_color="@color/place_holder_transparent"
+        app:shimmer_gradient_center_color_width=".5"
+        app:shimmer_mask_width=".3"
+        app:shimmer_angle="20"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/shimmer_layout_for_hotel_clicked"/>
+
+        </LinearLayout>
+
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view_hotel_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_hotel_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:animateLayoutChanges="true">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_clicked_hotel_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:animateLayoutChanges="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/imageView_image_of_hotel"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="150dp"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--android:adjustViewBounds="true"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:layout_marginLeft="30dp"-->
+                            <!--android:layout_marginRight="30dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/ic_launcher_background"-->
+                            <!--android:transitionName="fragment_transition" />-->
+
+                        <!--<ViewFlipper-->
+                            <!--android:id="@+id/viewFlipper_image_of_hotel"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="150dp"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:layout_marginLeft="30dp"-->
+                            <!--android:layout_marginRight="30dp"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--/>-->
+
+                        <!--<com.daimajia.slider.library.SliderLayout-->
+                            <!--android:id="@+id/slider"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="150dp"-->
+                            <!--android:padding="10dp"-->
+                            <!--android:layout_marginLeft="30dp"-->
+                            <!--android:layout_marginRight="30dp"-->
+                            <!--android:layout_gravity="center"-->
+                            <!--/>-->
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPager_hotel_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp">
+
+                        </android.support.v4.view.ViewPager>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:animateLayoutChanges="true">
+
+                            <TextView
+                                android:id="@+id/textView_hotel_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:text="Hotel Name"
+                                android:textColor="@color/color_text_color"
+                                android:textSize="24sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/textView_hotel_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="5dp"
+                                android:text="Hotel Address"
+                                android:textColor="@color/color_sub_text_color"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/color_of_separator" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="1"
+                        android:animateLayoutChanges="true">
+
+                        <TextView
+                            android:id="@+id/textView_hotel_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight=".5"
+                            android:text=""
+                            android:textColor="@color/color_text_color"
+                            android:textSize="17sp" />
+
+
+                        <TextView
+                            android:id="@+id/textView_hotel_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".5"
+                            android:drawableRight="@drawable/ic_star_black"
+                            android:drawablePadding="5dp"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/color_text_color"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:animateLayoutChanges="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <TextView
+                    android:id="@+id/text_view_select_any_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Select any Category from below"
+
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_error_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone"
+                    android:animateLayoutChanges="true">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/sorry"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Category Found !!!"
+                        android:textSize="20sp"
+                        android:textColor="@color/color_text_color"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:visibility="visible"
+                    android:id="@+id/recycler_view_clicked_hotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

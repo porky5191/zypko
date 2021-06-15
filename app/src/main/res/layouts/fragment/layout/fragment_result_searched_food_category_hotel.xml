@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout_searched_hotels_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_search_food_category"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Food Category"
+        app:titleTextColor="@color/colorBlue_tez" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_in_searched_hotels_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_search_food_category">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_of_searched_food_category_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

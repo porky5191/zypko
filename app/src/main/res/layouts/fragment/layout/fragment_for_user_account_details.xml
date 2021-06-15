@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <android.support.design.widget.AppBarLayout
+        style="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@color/colorWhite"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#ffffff"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_user_account"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/relative_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView_user_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="29dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_view_secondary_user_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBaseline="@id/imageView_user_image"
+                    android:layout_alignBottom="@id/imageView_user_image"
+                    android:layout_marginLeft="-34dp"
+                    android:layout_toRightOf="@id/imageView_user_image"
+                    android:src="@drawable/camera" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_layout1"
+                android:layout_marginTop="20dp"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="15dp">
+
+
+                <TextView
+                    android:id="@+id/textView_user_account_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dipankar Rabha"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView_user_account_user_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8486749811"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/textView_user_account_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dipankarrabhaonline@gmail.com"
+                    android:textColor="@color/color_text_color"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linear_layout2"> -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:animateLayoutChanges="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textView_recent_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_below"
+                        android:padding="15dp"
+                        android:text="Recent Orders"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="18sp"
+                        android:foreground="?android:attr/selectableItemBackground"
+
+                        />
+
+                    <View
+                        android:id="@+id/view_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_recent_orders"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/colorBlue_tez"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_no_recent_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No recent order"
+                        android:textAlignment="center"
+                        android:textSize="17sp"
+                        android:textColor="@color/color_text_color"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_recent_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_2"
+                android:layout_below="@id/card_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/textView_past_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_below"
+                        android:padding="15dp"
+                        android:text="Past Orders"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="18sp"
+                        android:foreground="?android:attr/selectableItemBackground"
+
+                        />
+
+                    <View
+                        android:id="@+id/view_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_past_orders"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/colorBlue_tez"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_no_past_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No past order"
+                        android:textAlignment="center"
+                        android:textSize="17sp"
+                        android:textColor="@color/color_text_color"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_past_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/card_view_2"
+                android:animateLayoutChanges="true"
+                android:layout_gravity="bottom">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/textView_user_account_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_below"
+                        android:padding="15dp"
+                        android:text="Help"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="18sp"
+                        android:foreground="?android:attr/selectableItemBackground"
+
+                        />
+
+                    <View
+                        android:id="@+id/view_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView_user_account_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_call_blue"
+                        android:padding="15dp"
+                        android:text="Call for Technical Help"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:foreground="?android:attr/selectableItemBackground"/>
+
+                    <View
+                        android:id="@+id/view_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/textView_user_account_message"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:drawableRight="@drawable/ic_message"-->
+                        <!--android:padding="15dp"-->
+                        <!--android:text="Message"-->
+                        <!--android:textColor="@color/color_text_color"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:foreground="?android:attr/selectableItemBackground" />-->
+
+                    <!--<View-->
+                        <!--android:id="@+id/view_3"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@color/color_of_separator"-->
+                        <!--android:visibility="gone" />-->
+
+                    <TextView
+                        android:id="@+id/textView_user_account_facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_facebook_logo"
+                        android:padding="15dp"
+                        android:text="Facebook"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:foreground="?android:attr/selectableItemBackground" />
+
+                    <View
+
+                        android:id="@+id/view_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView_user_account_instagram"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_instagram_logo"
+                        android:padding="15dp"
+                        android:text="Instagram"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:foreground="?android:attr/selectableItemBackground" />
+
+                    <View
+
+                        android:id="@+id/view_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView_user_account_gmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_gmail"
+                        android:padding="15dp"
+                        android:text="Email"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:foreground="?android:attr/selectableItemBackground" />
+
+                    <View
+                        android:id="@+id/view_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_of_separator"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textView_user_account_whatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_whatsapp_logo"
+                        android:padding="15dp"
+                        android:text="Whatsapp"
+                        android:textColor="@color/color_text_color"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/card_view_3"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <!--</ScrollView> -->
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="2dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/textView_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_logout"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="LOGOUT"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:background="@color/colorBlue_tez_dark"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/hotel_menu_category_round_corner"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignBottom="@id/textview"
+        android:background="@drawable/hotel_menu_category_round_corner" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignBottom="@id/textview"
+        android:background="@drawable/hotel_menu_category_round_corner" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/hotel_menu_category_round_corner"
+        android:layout_alignBottom="@id/textview"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="kabskabk"
+        android:textSize="20sp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@drawable/hotel_menu_category_round_corner"
+        android:layout_alignBottom="@id/textview"
+        android:shadowColor="@color/colorAccent"/>
+
+
+
+</RelativeLayout>

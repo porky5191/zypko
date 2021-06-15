@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relative_layout_in_random_hotel_search_animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_view_station"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="9dp"
+        android:background="@color/colorWhite"
+        android:visibility="visible">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_for_past_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_no_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/no_history" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No History Found ... ! ! !"
+                android:textAlignment="center"
+                android:textColor="@color/color_light_red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search your desire Station.."
+                android:textAlignment="center"
+                android:textColor="@color/color_sub_text_color"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textview_for_error_message_in_past_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="No Station Available"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_station"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_floating_text_button"
+        android:layout_margin="10dp"
+        >
+        <LinearLayout
+            android:id="@+id/linear_layout_for_floating_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="2dp"
+            >
+
+            <ImageView
+                android:id="@+id/image_btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search_button"
+                android:layout_marginLeft="12dp"/>
+
+            <EditText
+                android:id="@+id/edittext_search_station"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="In which Station..."
+                android:textColor="@color/color_sub_text_color"
+                android:textSize="18sp"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

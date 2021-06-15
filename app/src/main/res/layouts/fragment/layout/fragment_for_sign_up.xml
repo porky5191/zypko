@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Sign Up"
+        app:titleTextColor="@color/colorBlue_tez" />
+
+
+        <EditText
+            android:layout_below="@id/toolbar_sign_up"
+            android:id="@+id/edit_text_sign_up_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Phone Number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            app:backgroundTint="@color/colorBlue_tez" />
+
+        <EditText
+            android:layout_below="@id/edit_text_sign_up_phone_number"
+            android:id="@+id/edit_text_sign_up_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Email (optional)"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            app:backgroundTint="@color/colorBlue_tez" />
+
+        <EditText
+            android:layout_below="@id/edit_text_sign_up_email"
+            android:id="@+id/edit_text_sign_up_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            app:backgroundTint="@color/colorBlue_tez"
+
+
+            />
+
+        <EditText
+            android:layout_below="@id/edit_text_sign_up_Name"
+            android:id="@+id/edit_text_sign_up_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Password (Min 6 - Max 15 )"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            app:backgroundTint="@color/colorBlue_tez" />
+
+        <CheckBox
+            android:layout_below="@id/edit_text_sign_up_password"
+            android:id="@+id/check_box_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:buttonTint="@color/colorBlue_tez"
+            android:checked="false"
+            android:text="I have referral"
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:layout_below="@id/check_box_sign_up"
+            android:id="@+id/edit_text_sign_up_referral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Referral"
+            android:imeOptions="actionDone"
+            android:inputType="textCapCharacters"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorBlue_tez" />
+
+
+        <Button
+            android:id="@+id/sign_up_button_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlue_tez"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="2dp"
+            android:text="SIGN UP"
+            android:textColor="@color/colorWhite" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorBlue_tez_dark"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+
+</RelativeLayout>

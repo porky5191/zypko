@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/imageView_cart_veg_or_non_veg"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:src="@drawable/non_veg"
+            />
+
+        <TextView
+            android:id="@+id/text_view_cart_selected_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textSize="15sp"
+            android:textColor="@color/colorFloating_text_color"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/imageView_minus_item"
+                android:layout_gravity="center"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_remove_circle_outline_blue"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/textView_individual_food_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:id="@+id/imageView_add_item"
+                android:layout_gravity="center"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_add_circle_outline_blue"
+                android:padding="5dp"
+                android:layout_marginRight="10dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout_old_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rupee"
+                    android:textSize="10sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_cart_selected_item_old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textSize="10sp"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rupee"
+                    android:textColor="@color/colorFloating_text_color"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/textView_total_individual_food_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="150"
+                    android:textColor="@color/colorFloating_text_color"
+                    android:textSize="13sp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

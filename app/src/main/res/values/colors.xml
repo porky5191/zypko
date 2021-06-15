@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorTextview_of_food">#000000</color>
+    <color name="colorFloating_text_background">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorFloating_text_color">#2d2d2d</color>
+    <color name="color_text_color">#414141</color>
+    <color name="color_sub_text_color">#7b7b7b</color>
+    <color name="colorBlue_tez">#5683ff</color>
+    <color name="colorBlue_tez_light">#6e94fd</color>
+    <color name="colorBlue_tez_dark">#346afd</color>
+    <color name="colorBlue_tez_extra_dark">#1c59ff</color>
+
+    <color name="color_google_blue">#4285f4</color>
+    <color name="color_google_red">#db4437</color>
+    <color name="color_light_red">#ef6356</color>
+    <color name="color_google_dark_red">#da1e0e</color>
+    <color name="color_google_yellow">#f4b400</color>
+    <color name="color_google_green">#0f9d58</color>
+    <color name="color_separator_in_recycler_view">#e1e1e1</color>
+    <color name="color_of_separator">#e1e1e1</color>
+    <color name="color_Black">#000000</color>
+
+    <color name="color_floating_text_button">#f7f7f7</color>
+    <color name="color_splash_screen">#d2d2d2</color>
+
+
+    <color name="color_for_loading">#e4e4e4</color>
+    <color name="place_holder_">#dbededed</color>
+    <color name="original_place_holder_">#dddddd</color>
+    <color name="place">#f4f4f4</color>
+    <color name="place_holder_transparent">#9fffffff</color>
+    <color name="test">#A2878787</color>
+
+    <color name="color_bg_text_above_image">#a2686161</color>
+
+
+
+</resources>

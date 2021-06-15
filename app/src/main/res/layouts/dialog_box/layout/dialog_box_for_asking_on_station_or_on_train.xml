@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_view_select_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your Location "
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/color_text_color"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/Radio_group_asking_station_or_train"
+        android:layout_below="@id/text_view_select_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:checkedButton="@id/radio_button_On_train">
+
+
+        <RadioButton
+            android:id="@+id/radio_button_On_train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On Train"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_on_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On Station"/>
+
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/dialog_box_asking_station_train_button"
+        android:layout_below="@id/Radio_group_asking_station_or_train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="SUBMIT"
+        android:background="@color/colorBlue_tez"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+</RelativeLayout>

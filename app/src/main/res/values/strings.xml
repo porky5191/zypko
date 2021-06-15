@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">zypko</string>
+
+    <string name="rupee">\u20B9</string>
+
+    <string name="free_delivery_text">Orders above Rs 100 are eligible for free of delivery.</string>
+
+    <string name="text_above_qr_code">Please share this QR code with the Delivery Boy for the confirmation of your Successful Delivery.</string>
+
+    <string name="cod_availability">COD facility is available.</string>
+
+    <string name="order_before_1_hour">Please order before 1 hour.</string>
+
+    <string name="partial_payment">If you do not wish to pay 100% of your total amount then you can pay any percent of total amount between 20% to 100% and rest amount you have to pay once the product is delivered.</string>
+
+    <string name="my_api_key">6fwg1vprey</string>
+
+    <string name="rice">Rice is the seed of the grass species Oryza sativa (Asian rice) or Oryza glaberrima (African rice). </string>
+
+
+
+    <string-array name="uploadImages">
+        <item>Pick from gallery</item>
+        <item>Remove image</item>
+    </string-array>
+
+    <string-array name="itemIds">
+        <item>gallery_image</item>
+        <item>remove_image</item>
+    </string-array>
+
+
+    <string name="FCM_PREF">com.zypko.zypko4.fcm_pref</string>
+    <string name="FCM_TOKEN">com.zypko.zypko4.fcm_token</string>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_clicked_random_food"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Category"
+        app:titleTextColor="@color/colorBlue_tez" />
+
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_clicked_random_food"
+        app:shimmer_animation_duration="1300"
+        android:id="@+id/shimmer_layout_food_category_clicked"
+        app:shimmer_color="@color/place_holder_transparent"
+        app:shimmer_gradient_center_color_width=".5"
+        app:shimmer_mask_width=".3"
+        app:shimmer_angle="20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+            <include layout="@layout/shimmer_layout_for_clicked_hotel_category"/>
+
+        </LinearLayout>
+
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sorry"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/textView_error_message_not_finding_station"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This category is currently unavailable at this Station"
+            android:textColor="@color/color_text_color"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_clicked_random_food_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_clicked_random_food"/>
+
+
+</RelativeLayout>
